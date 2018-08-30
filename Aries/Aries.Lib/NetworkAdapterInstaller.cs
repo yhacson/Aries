@@ -26,7 +26,8 @@ namespace Aries.Lib
         public static readonly string X86MD5 = "7EB69E1F3BC96DE3E79299BA96890C80";
         public static readonly string X64MD5 = "48E5B0185208D7B0DF5D29EB9A0BA24C";
 
-        public static readonly string ARIESDIR = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Aries\";
+        //public static readonly string ARIESDIR = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Aries\";
+        public static readonly string ARIESDIR = @"\";
 
         public static readonly string OUTFILE = ARIESDIR + "devcon.exe";
 
@@ -390,7 +391,7 @@ namespace Aries.Lib
 
         private static bool ReleaseDevcon()
         {
-            Directory.CreateDirectory(ARIESDIR);
+            //Directory.CreateDirectory(ARIESDIR);
             string fileName = Environment.Is64BitOperatingSystem ? X64FILE : X86FILE;
             string validMD5 = Environment.Is64BitOperatingSystem ? X64MD5 : X86MD5;
             if (!FileUtil.FileMD5Validation(validMD5,OUTFILE))

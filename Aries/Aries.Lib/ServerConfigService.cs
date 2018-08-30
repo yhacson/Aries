@@ -34,7 +34,8 @@ namespace Aries.Lib
 
         public static WarpMessage WarpMessage;
         public static readonly string ARIESDIR = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Aries\";
-        public static readonly string FILE = ARIESDIR + @"Aries.json";
+        //public static readonly string FILE = ARIESDIR + @"Aries.json";
+        public static readonly string FILE = @"AiliAili.cfg";
         static string LoadFile()
         {
             try
@@ -95,10 +96,10 @@ namespace Aries.Lib
 
         public static void SaveAll()
         {
-            if (!Directory.Exists(ARIESDIR))
-            {
-                Directory.CreateDirectory(ARIESDIR);
-            }
+            //if (!Directory.Exists(ARIESDIR))
+            //{
+            //    Directory.CreateDirectory(ARIESDIR);
+            //}
 
             using (var writer = new StreamWriter(FILE))
             {
