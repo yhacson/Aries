@@ -122,7 +122,7 @@ namespace Aries.Lib
                         if (process.MainWindowHandle != IntPtr.Zero)
                         {
                             
-                            int res = SetWindowText(process.MainWindowHandle, $"冒险岛万能登录器 By Kevinconan & Diluka 当前时间:{DateTime.Now}");
+                            int res = SetWindowText(process.MainWindowHandle, $"ACMS143登录器 当前时间:{DateTime.Now}");
                                 
 
                         }
