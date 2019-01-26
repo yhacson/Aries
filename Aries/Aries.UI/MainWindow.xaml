@@ -4,7 +4,7 @@
                       xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Aries.MainWindow"
                       xmlns:localConverters="clr-namespace:Aries.Converters"                  
-                      Title="MapleStory登录器"
+                      Title="Aili冒险岛登录器 v1.1"
                       Width="480" Icon="BlueSnail.ico" ResizeMode="NoResize" Closed="MetroWindow_Closed" SizeToContent="Height" Closing="MetroWindow_Closing" WindowStartupLocation="CenterScreen">
     <Controls:MetroWindow.Resources>
         <localConverters:NullToFalseConverter x:Key="NullToFalseConverter"/>
@@ -29,12 +29,16 @@
                     <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="关于" />
                 </StackPanel>
             </Button>
-            
+
         </Controls:WindowCommands>
     </Controls:MetroWindow.RightWindowCommands>
 
     <Grid>
-        <StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="77*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.ColumnSpan="2">
             <StackPanel Style="{StaticResource RowStyle}">
                 <Label Style="{StaticResource SubLabelStyle}" Content="选择配置"/>
                 <ComboBox x:Name="cbServerConfig" Style="{StaticResource ComboBoxStyle}" ItemsSource="{Binding}" DisplayMemberPath="ServerName" SelectedValuePath="ID" SelectionChanged="cbServerConfig_SelectionChanged"/>
@@ -69,7 +73,7 @@
                 <Button x:Name="btnStart" Content="启动" Style="{StaticResource ButtonLgStyle}" IsEnabled="{Binding SelectedItem,ElementName=cbServerConfig,Converter={StaticResource NullToFalseConverter}}" Click="btnStart_Click"></Button>
                 <Button x:Name="btnStop" Content="停止" Style="{StaticResource ButtonLgStyle}" Click="btnStop_Click" IsEnabled="False"></Button>
                 <StackPanel Name="CheckGroup">
-                    <RadioButton x:Name="radio_Adapter" Content="网卡模式" Margin="5" IsChecked="True" Checked="radio_Adapter_Checked">
+                    <RadioButton x:Name="radio_Adapter" Content="网卡模式" Margin="5" IsChecked="True" Checked="radio_Adapter_Checked" IsEnabled="False">
                         <RadioButton.ToolTip>
                             <StackPanel>
                                 <Label Content="此模式将会自动创建虚拟网卡，兼容性较好">
