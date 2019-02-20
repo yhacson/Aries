@@ -4,8 +4,8 @@
                       xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Aries.MainWindow"
                       xmlns:localConverters="clr-namespace:Aries.Converters"                  
-                      Title="Aili冒险岛登录器 v1.1"
-                      Width="480" Icon="BlueSnail.ico" ResizeMode="NoResize" Closed="MetroWindow_Closed" SizeToContent="Height" Closing="MetroWindow_Closing" WindowStartupLocation="CenterScreen">
+                      Title="Aili冒险岛登录器 v1.2"
+                      Width="517.588" Icon="BlueSnail.ico" ResizeMode="NoResize" Closed="MetroWindow_Closed" SizeToContent="Height" Closing="MetroWindow_Closing" WindowStartupLocation="CenterScreen" Height="409.155">
     <Controls:MetroWindow.Resources>
         <localConverters:NullToFalseConverter x:Key="NullToFalseConverter"/>
     </Controls:MetroWindow.Resources>
@@ -104,7 +104,7 @@
 
 
             </StackPanel>
-            <TextBox x:Name="tbLogs" TextWrapping="Wrap" Margin="5" Text="{Binding DataContext, RelativeSource={RelativeSource Self}}" Height="100"/>
+            <TextBox x:Name="tbLogs" TextWrapping="Wrap" Margin="5" Text="{Binding DataContext, RelativeSource={RelativeSource Self}}" Height="159"/>
         </StackPanel>
     </Grid>
 </Controls:MetroWindow>
